@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { TextField, Button, Container, Typography } from '@mui/material';
+import { logActivity } from '../logger';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -12,7 +13,9 @@ const Login = () => {
     e.preventDefault();
     const auth = getAuth();
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      logActivity(user.uid, 'login');
       navigate('/');
     } catch (error) {
       console.error('Error logging in:', error);
