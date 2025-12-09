@@ -10,10 +10,10 @@ const Signup = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    const auth = getAuth();
+ 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate('/');
+      navigate('/DailyRoutinesScreen');
     } catch (error) {
       console.error('Error signing up:', error);
     }

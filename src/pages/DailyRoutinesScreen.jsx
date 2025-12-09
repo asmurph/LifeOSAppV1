@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import { Button, Box } from '@mui/material';
 import { useAuth } from '../useAuth';
 import { useNavigate } from 'react-router-dom';
 
-const LoginScreen = () => {
+const DailyRoutinesScreen = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
@@ -19,4 +19,4 @@ const LoginScreen = () => {
   );
 };
 
-export default LoginScreen;
+export default DailyRoutinesScreen;

@@ -4,7 +4,7 @@ import { AuthProvider, useAuth } from './useAuth';
 import LoginScreen from './pages/LoginScreen';
 import MainTabs from './pages/MainTabs';
 import Dashboard from './pages/Dashboard';
-import Routines from './pages/Routines';
+import Routines from './pages/DailyRoutinesScreen';
 import Behavior from './pages/Behavior';
 import Mood from './pages/Mood';
 import Sensory from './pages/Sensory';
@@ -12,6 +12,7 @@ import Safety from './pages/Safety';
 import Notes from './pages/Notes';
 import Tasks from './pages/Tasks';
 import Children from './pages/Children';
+import DailyRoutinesScreen from './pages/DailyRoutinesScreen';
 import PredictiveSuggestions from './pages/PredictiveSuggestions';
 import Settings from './pages/Settings';
 
@@ -34,6 +35,7 @@ const App = () => {
               <Route path="tasks" element={<Tasks />} />
             </Route>
             <Route path="/children" element={<Children />} />
+            <Route path="/daily-routines" element={<DailyRoutinesScreen />} />
             <Route path="/predictive-suggestions" element={<PredictiveSuggestions />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<Navigate to="/dashboard" />} />
@@ -41,7 +43,7 @@ const App = () => {
         ) : (
           <>
             <Route path="/login" element={<LoginScreen />} />
-            <Route path="*" element={<Navigate to="/login" />} />
+            <Route path="*" element={<Navigate to="/Dashboard" />} />
           </>
         )}
       </Routes>
