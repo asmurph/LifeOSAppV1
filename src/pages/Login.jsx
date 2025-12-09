@@ -16,7 +16,7 @@ const Login = () => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       logActivity(user.uid, 'login');
-      navigate('/DailyRoutinesScreen');
+      navigate('/Behavior');
     } catch (error) {
       console.error('Error logging in:', error);
     }

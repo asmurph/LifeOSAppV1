@@ -10,7 +10,7 @@ const Signup = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    const auth = getAuth();
+ 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       navigate('/DailyRoutinesScreen');

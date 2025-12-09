@@ -43,7 +43,7 @@ const App = () => {
         ) : (
           <>
             <Route path="/login" element={<LoginScreen />} />
-            <Route path="*" element={<Navigate to="/login" />} />
+            <Route path="*" element={<Navigate to="/Dashboard" />} />
           </>
         )}
       </Routes>
