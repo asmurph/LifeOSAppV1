@@ -9,7 +9,7 @@ const LoginScreen = () => {
 
   const handleLogin = () => {
     login();
-    navigate('/dashboard');
+    navigate('/DailyRoutinesScreen');
   };
 
   return (

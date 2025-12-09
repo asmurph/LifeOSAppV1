@@ -13,7 +13,7 @@ const Signup = () => {
     const auth = getAuth();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate('/');
+      navigate('/DailyRoutinesScreen');
     } catch (error) {
       console.error('Error signing up:', error);
     }
