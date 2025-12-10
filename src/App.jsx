@@ -17,6 +17,8 @@ import PredictiveSuggestions from './pages/PredictiveSuggestions';
 import Settings from './pages/Settings';
 import BehaviorList from './components/BehaviorList';
 import SignupForm from './components/SignupForm';
+
+
 const App = () => {
   const { user } = useAuth();
 
@@ -41,7 +43,7 @@ const App = () => {
             <Route path="/daily-routines" element={<DailyRoutinesScreen />} />
             <Route path="/predictive-suggestions" element={<PredictiveSuggestions />} />
             <Route path="/settings" element={<Settings />} />
-            <Route path="*" element={<Navigate to="/dashboard" />} />
+            <Route path="*" element={<Navigate to="/dashboardv2" />} />
           </>
         ) : (
           <>
