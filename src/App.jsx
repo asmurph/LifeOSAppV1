@@ -16,7 +16,7 @@ import DailyRoutinesScreen from './pages/DailyRoutinesScreen';
 import PredictiveSuggestions from './pages/PredictiveSuggestions';
 import Settings from './pages/Settings';
 import BehaviorList from './components/BehaviorList';
-
+import SignupForm from './components/SignupForm';
 const App = () => {
   const { user } = useAuth();
 
@@ -35,6 +35,7 @@ const App = () => {
          
               <Route path="tasks" element={<Tasks />} />
               <Route path="behaviorlist" element={<BehaviorList />} />
+              <Route path="SignUpForm" element={<SignupForm />} />
             </Route>
             <Route path="/children" element={<Children />} />
             <Route path="/daily-routines" element={<DailyRoutinesScreen />} />

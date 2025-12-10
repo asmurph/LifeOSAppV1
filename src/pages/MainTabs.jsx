@@ -21,6 +21,7 @@ const MainTabs = () => {
         <Tab label="Notes" component={Link} to="/notes" />
         <Tab label="Tasks" component={Link} to="/tasks" />
         <Tab label="BehaviorList" component={Link} to="/behaviorlist" />
+        <Tab label="SignUpForm" component={Link} to="../components/SignUpForm" />
       </Tabs>
       <Outlet />
     </Box>
