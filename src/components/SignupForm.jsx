@@ -1,6 +1,7 @@
 // src/components/SignupForm.jsx
 import React, { useState } from 'react';
 import { signupUser } from '../services/authService';
+import { useNavigate } from 'react-router-dom';
 
 const SignupForm = () => {
   const [form, setForm] = useState({
@@ -44,6 +45,7 @@ const SignupForm = () => {
       });
       // Optionally reset form fields here
       setForm({ email: '', password: '', username: '' });
+       navigate('/Login');
     } else {
       setFeedback({ 
         message: result.error || 'Sign up failed.',

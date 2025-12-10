@@ -26,7 +26,7 @@
     }
 
     // Example usage:
-    registerUser("newuser@example.com", "strongpassword123", "John Doe");
+    //registerUser("newuser@example.com", "strongpassword123", "John Doe");
     };
 
 export default TestSignup;
